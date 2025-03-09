@@ -1,0 +1,12 @@
+services:
+  app:
+    image: go-crud
+    restart: always
+    environment:
+      - DB_USER=crud
+      - DB_PASSWORD=userCrud
+      - DB_HOST=10.10.10.7
+      - DB_PORT=3306
+      - DB_NAME=test.crud
+    ports:
+      - "8080:8080"
